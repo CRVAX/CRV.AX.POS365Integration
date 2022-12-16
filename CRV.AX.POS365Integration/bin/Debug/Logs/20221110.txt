@@ -1,0 +1,30 @@
+2022-11-10 17:05:47 [INF]: Environment: STAGE
+2022-11-10 17:05:52 [INF]: Environment: STAGE
+2022-11-10 17:06:07 [INF]: Environment: STAGE
+2022-11-10 17:06:17 [INF]: Environment: STAGE
+2022-11-10 17:06:41 [INF]: Environment: UAT
+2022-11-10 17:06:54 [INF]: Environment: UAT
+2022-11-10 18:25:15 [INF]: Environment: UAT
+2022-11-10 18:25:15 [INF]: Start calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-10 18:25:15 [ERR]: CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET) - Exception message: Response status code does not indicate success: 500 (ValidationException).
+Inner Exception (If any): 
+2022-11-10 18:25:26 [INF]: Environment: UAT
+2022-11-10 18:25:33 [INF]: Start calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-10 18:25:49 [ERR]: CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET) - Exception message: Response status code does not indicate success: 500 (ValidationException).
+Inner Exception (If any): 
+2022-11-10 18:25:53 [INF]: Environment: UAT
+2022-11-10 18:29:08 [INF]: Environment: UAT
+2022-11-10 18:29:19 [INF]: Start calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-10 18:31:17 [INF]: Environment: UAT
+2022-11-10 18:31:20 [INF]: Start calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-10 18:31:30 [INF]: Environment: UAT
+2022-11-10 18:31:30 [INF]: Start calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-10 18:32:05 [INF]: Environment: UAT
+2022-11-10 18:32:05 [INF]: Start calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-10 18:32:07 [INF]: Calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-10 18:32:16 [INF]: Environment: UAT
+2022-11-10 18:32:16 [INF]: Start calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-10 18:32:32 [INF]: Calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-10 18:33:35 [INF]: Environment: UAT
+2022-11-10 18:33:35 [INF]: Start calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-10 18:33:42 [INF]: Calling CRVBase.CallAPI(uri: https://am015.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET

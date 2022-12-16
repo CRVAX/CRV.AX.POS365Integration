@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE0FE399-80EE-4BDB-8ECB-93554A0D6EBF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CRV.AX.POS365Integration</RootNamespace>
+    <AssemblyName>CRV.AX.POS365Integration</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AXLogExtension, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AXLogExtension\AXLogExtension\bin\Release\AXLogExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=30.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.30.0.1\lib\net45\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Accounts\AccountBusiness.cs" />
+    <Compile Include="Business\CRVBase.cs" />
+    <Compile Include="Business\Orders\OrderBusiness.cs" />
+    <Compile Include="Business\Partners\PartnerBusiness.cs" />
+    <Compile Include="Business\Products\ProductBusiness.cs" />
+    <Compile Include="Business\Stores\StoreBusiness.cs" />
+    <Compile Include="Common\AxCSVHelper.cs" />
+    <Compile Include="Common\AxFolder.cs" />
+    <Compile Include="Common\AxInit.cs" />
+    <Compile Include="Common\BaseURL.cs" />
+    <Compile Include="Common\TextFileHelper.cs" />
+    <Compile Include="Common\URLs.cs" />
+    <Compile Include="Contracts\Accounts\AccountCreateDto.cs" />
+    <Compile Include="Contracts\Accounts\AccountCSVDto.cs" />
+    <Compile Include="Contracts\Accounts\AccountDeleteDto.cs" />
+    <Compile Include="Contracts\Accounts\AccountDeleteSuccessDto.cs" />
+    <Compile Include="Contracts\Accounts\AccountGetDto.cs" />
+    <Compile Include="Contracts\Accounts\AccountSuccessDto.cs" />
+    <Compile Include="Contracts\Accounts\AccountFailDto.cs" />
+    <Compile Include="Contracts\Accounts\AccountGetSuccessDto.cs" />
+    <Compile Include="Contracts\Accounts\SuccessedAccount.cs" />
+    <Compile Include="Contracts\Accounts\AccountUpdateDto.cs" />
+    <Compile Include="Contracts\BaseDto.cs" />
+    <Compile Include="Contracts\BaseParams.cs" />
+    <Compile Include="Contracts\BaseRequestDto.cs" />
+    <Compile Include="Contracts\OrderDetails\OrderDetailSuccessDto.cs" />
+    <Compile Include="Contracts\OrderDetails\SuccessedOrderDetail.cs" />
+    <Compile Include="Contracts\Orders\OrderCSVDto.cs" />
+    <Compile Include="Contracts\Orders\OrderDeleteDto.cs" />
+    <Compile Include="Contracts\Orders\OrderDeleteSuccessDto.cs" />
+    <Compile Include="Contracts\Orders\OrderFailDto.cs" />
+    <Compile Include="Contracts\Orders\OrderGetDto.cs" />
+    <Compile Include="Contracts\Orders\SuccessedOrder.cs" />
+    <Compile Include="Contracts\Partners\PartnerCSVDto.cs" />
+    <Compile Include="Contracts\Partners\PartnerDeleteDto.cs" />
+    <Compile Include="Contracts\Partners\PartnerDeleteSuccessDto.cs" />
+    <Compile Include="Contracts\Partners\PartnerFailDto.cs" />
+    <Compile Include="Contracts\Partners\PartnerGetDto.cs" />
+    <Compile Include="Contracts\Partners\PartnerGetSuccessDto.cs" />
+    <Compile Include="Contracts\Partners\PartnerSuccessDto.cs" />
+    <Compile Include="Contracts\Partners\PartnerCreateDto.cs" />
+    <Compile Include="Contracts\Partners\SuccessedPartner.cs" />
+    <Compile Include="Contracts\Partners\PartnerUpdateDto.cs" />
+    <Compile Include="Contracts\FailStatusDto.cs" />
+    <Compile Include="Contracts\Orders\MoreAttributeDto.cs" />
+    <Compile Include="Contracts\Orders\OrderCreateDto.cs" />
+    <Compile Include="Contracts\OrderDetails\OrderDetailCreateDto.cs" />
+    <Compile Include="Contracts\OrderDetails\OrderDetailCSVDto.cs" />
+    <Compile Include="Contracts\Orders\OrderSuccessDto.cs" />
+    <Compile Include="Contracts\PaymentMethods\PaymentMethodCreateDto.cs" />
+    <Compile Include="Contracts\PaymentMethods\PaymentMethodCSVDto.cs" />
+    <Compile Include="Common\AxConstants.cs" />
+    <Compile Include="Contracts\PaymentMethods\PaymentMethodsSuccessDto.cs" />
+    <Compile Include="Contracts\PaymentMethods\SuccessedPaymentMethod.cs" />
+    <Compile Include="Contracts\Products\ProductGetSuccessDto.cs" />
+    <Compile Include="Contracts\Products\ProductCreateDto.cs" />
+    <Compile Include="Contracts\Products\ProductCSVDto.cs" />
+    <Compile Include="Contracts\Products\ProductDeleteDto.cs" />
+    <Compile Include="Contracts\Products\ProductDeleteSuccessDto.cs" />
+    <Compile Include="Contracts\Products\ProductFailDto.cs" />
+    <Compile Include="Contracts\Products\ProductGetDto.cs" />
+    <Compile Include="Contracts\Products\ProductSuccessDto.cs" />
+    <Compile Include="Contracts\Products\SuccessedProduct.cs" />
+    <Compile Include="Contracts\Products\ProductUpdateDto.cs" />
+    <Compile Include="Contracts\Stores\StoreCSVDto.cs" />
+    <Compile Include="Contracts\Stores\StoreDto.cs" />
+    <Compile Include="Contracts\Stores\StoreFailDto.cs" />
+    <Compile Include="Contracts\Stores\StoreInputDto.cs" />
+    <Compile Include="Interfaces\Accounts\IAccountBusiness.cs" />
+    <Compile Include="Interfaces\Orders\IOrderBusiness.cs" />
+    <Compile Include="Interfaces\Partners\IPartnerBusiness.cs" />
+    <Compile Include="Interfaces\Products\IProductBusiness.cs" />
+    <Compile Include="Interfaces\Stores\IStoreBusiness.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,1105 @@
+2022-11-14 15:52:49 [INF]: Environment: UAT
+2022-11-14 15:52:54 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 15:52:54 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 15:52:54 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/, method: POST, session: 8L2sd1TI0bAVbVPOjvnO, request_model: {"Partner":{"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"8L2sd1TI0bAVbVPOjvnO","AXId":"00000000-0000-0000-0000-000000000000","StoreNumber":null})
+2022-11-14 15:52:54 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/, method: POST, session: 8L2sd1TI0bAVbVPOjvnO, request_model: {"Partner":{"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"8L2sd1TI0bAVbVPOjvnO","AXId":"00000000-0000-0000-0000-000000000000","StoreNumber":null}) return success: <!DOCTYPE html>
+<html>
+<head>
+    <!-- Copyright © 2022 - 365 Software JSC (POS365.VN) -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>&#x110;&#x103;ng nh&#x1EAD;p ph&#x1EA7;n m&#x1EC1;m</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="robots" content="none" />
+    <meta name="google" content="notranslate" />
+    <meta property="og:title" content="POS365 | Giải pháp quản lý bán hàng" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="POS365.VN" />
+    <meta property="og:description" content="Phần mềm quản lý từ xa, giảm thất thoát tối đa" />
+    <meta property="og:image" content="/images/img-banner.png" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/favicon/ms-icon-144x144.png">
+
+
+    
+    
+        <script type="text/javascript" src="/bundle/bundle-jquery.min.js"></script>
+        <script type="text/javascript" src="/bundle/bundle-angular.min.js"></script>
+        <link rel="stylesheet" href="/bundle/bundle-guest.min.css" />
+    
+    <script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62807506-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-62807506-1');</script>
+</head>
+
+<body class="bg-body-login">
+    
+<script>angular.module('pos.login', ['ngCookies'])
+        .controller('LoginController', ['$scope', '$cookies', '$window', function ($scope, $cookies, $window) {
+            function getParameter(theParameter) {
+                var params = window.location.search.substr(1).split('&');
+
+                for (var i = 0; i < params.length; i++) {
+                    var p = params[i].split('=');
+                    if (p[0] == theParameter) {
+                        return decodeURIComponent(p[1]);
+                    }
+                }
+                return '';
+            }
+            var rth = '';
+            if (window.location.hash) {
+                rth = window.location.hash;
+            }
+            var rt = getParameter('redirect');
+            $scope.returnTo = '';
+            if (rt)
+                $scope.returnTo = rt + rth;
+            $scope.culture = $cookies.get('.AspNetCore.Culture');
+            if (!$scope.culture) {
+                $scope.culture = 'c=vi-VN|uic=vi-VN';
+            }
+            $scope.ChangeLanguage = function (lang) {
+                $scope.culture = lang;
+                var expireDate = new Date('Mon, 17 Nov 9999 23:59:59 GMT');
+                // Setting a cookie
+                $cookies.put(".AspNetCore.Culture", lang, { 'expires': expireDate });
+                //$cookies.put(".AspNetCore.Culture", lang, { 'expires': expireDate, domain: 'pos365.vn'});
+                $window.location.reload();
+            }
+
+        }]);</script>
+
+<ul class="cb-slideshow">
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+</ul>
+
+
+<div class="login clearfix" ng-app="pos.login" ng-controller="LoginController">
+    <div class="wrap clearfix">
+        <div class="login-content clearfix">
+            <a href="https://www.pos365.vn" target="_blank" class="logo-login wow fadeInDown hidden-xs" data-wow-delay="1.5s">
+                <img src="/images/logo-blue.png" alt="POS365.VN">
+
+
+            </a>
+            <div class="login-form clearfix wow fadeInUp form-horizontal" data-wow-delay="2s">
+                <h3>&#x110;&#x103;ng nh&#x1EAD;p ph&#x1EA7;n m&#x1EC1;m</h3>
+                <h5>FILA</h5>
+                <div id="p_errmsg">
+                    
+                </div>
+
+<form action="/Signin" method="post">                    <ul>
+                        <li>
+
+                            <input autofocus="" class="login-user" data-val="true" data-val-required="The Username field is required." id="Username" name="Username" placeholder="T&#xEA;n &#x111;&#x103;ng nh&#x1EAD;p ho&#x1EB7;c Email" type="text" value="" />
+                        </li>
+                        <li>
+                            <input class="login-pw" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="M&#x1EAD;t kh&#x1EA9;u" type="password" />
+                        </li>
+
+
+                        <li>
+                            <button name="loginsButton" type="submit" class="btn-login" value="Dashboard">
+                                Qu&#x1EA3;n l&#xFD;
+                            </button>
+                        </li>
+                        <li>
+
+
+                            <button name="loginsButton" type="submit" class="btn-reg" value="Sell">
+                                B&#xE1;n h&#xE0;ng
+                            </button>
+                        </li>
+                        <li class="login-help">
+
+                            <a href="/Signin/RequestPassword"><i class="fa fa-home red"></i> Qu&#xEA;n m&#x1EAD;t kh&#x1EA9;u?</a>
+
+
+
+
+                        </li>
+
+                    </ul>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8KGNV105mUNAnNzJ0ASc4h8oi_F0TWKsmTkw3s52MDGyHWdEpnNbyKaFww-y7cJz1xiknL5X5ziD7hhYqO25ItFHgTLFz7EpGpQKdtzmtVnzQCg3l0rmecO19C30derZLYAw_1TEly_9ObjhUTmI6r8" /></form>            </div>
+        </div>
+    </div>
+    <div class="login-option">
+
+    <div class="wrap">
+        <span class="login-note" ng-show="culture == 'c=vi-VN|uic=vi-VN'">
+            PHẦN MỀM QUẢN LÝ BÁN HÀNG<br>- Không cần cài đặt, dữ liệu an toàn tuyệt đối.<br>- Hoạt động trên : Máy tính, Iphone, Ipad, Android...
+        </span>
+        <span class="login-note" ng-show="culture != 'c=vi-VN|uic=vi-VN'">
+            POINT OF SALE MANAGEMENT SYSTEM<br>- No installation required, absolute data security.<br>- Can be run on any : Desktop, Iphone, Ipad, Android...
+        </span>
+    </div>
+</div>
+
+
+<div class="footer clearfix">
+        <div class="wrap">
+
+            <span class="f-copyright hidden-xs">© <a style="color:#fff" href="/Signin/License">2022</a> <a style="color:#fff" href="/Signin/Active">365</a> Software JSC.</span>
+            <a href="https://www.pos365.vn/dieu-khoan-su-dung-5725.html" target="_blank" class="f-copyright hidden-xs">&nbsp;&nbsp;|&nbsp;&nbsp;Terms & Privacy</a>
+            <a href="tel:19004515" target="_blank" class="f-copyright"><span class="hidden-xs">&nbsp;&nbsp;|&nbsp;&nbsp;</span>Hotline 24/7: 1900 4515</a>
+            <span class="login-lang">{{culture == 'c=vi-VN|uic=vi-VN'?'Ngôn ngữ':'Language'}}: <a ng-click="ChangeLanguage('c=my-MM|uic=my-MM')" href="javascript:void(0)"><img src="/images/flag-my.png" alt="" /></a><a ng-click="ChangeLanguage('c=en-US|uic=en-US')" href="javascript:void(0)"><img src="/images/flag-en.png" alt="" /></a><a ng-click="ChangeLanguage('c=vi-VN|uic=vi-VN')" href="javascript:void(0)"><img src="/images/flag-vi.png" alt="" /></a></span>
+            <a href="https://www.facebook.com/pos365.vn/" target="_blank" class="f-social hidden-xs"> {{culture == 'c=vi-VN|uic=vi-VN'?'Kết nối với chúng tôi':'Connect with us'}}</a>
+        </div>
+</div>
+<!--END footer-->
+</div>
+
+    
+</body>
+</html>
+
+2022-11-14 15:54:01 [INF]: Environment: UAT
+2022-11-14 15:54:01 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 15:54:01 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 15:54:01 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/, method: POST, session: DzMFc471o8VapSGyJat0, request_model: {"Partner":{"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"DzMFc471o8VapSGyJat0","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 15:54:01 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/, method: POST, session: DzMFc471o8VapSGyJat0, request_model: {"Partner":{"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"DzMFc471o8VapSGyJat0","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"}) return success: <!DOCTYPE html>
+<html>
+<head>
+    <!-- Copyright © 2022 - 365 Software JSC (POS365.VN) -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>&#x110;&#x103;ng nh&#x1EAD;p ph&#x1EA7;n m&#x1EC1;m</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="robots" content="none" />
+    <meta name="google" content="notranslate" />
+    <meta property="og:title" content="POS365 | Giải pháp quản lý bán hàng" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="POS365.VN" />
+    <meta property="og:description" content="Phần mềm quản lý từ xa, giảm thất thoát tối đa" />
+    <meta property="og:image" content="/images/img-banner.png" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/favicon/ms-icon-144x144.png">
+
+
+    
+    
+        <script type="text/javascript" src="/bundle/bundle-jquery.min.js"></script>
+        <script type="text/javascript" src="/bundle/bundle-angular.min.js"></script>
+        <link rel="stylesheet" href="/bundle/bundle-guest.min.css" />
+    
+    <script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62807506-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-62807506-1');</script>
+</head>
+
+<body class="bg-body-login">
+    
+<script>angular.module('pos.login', ['ngCookies'])
+        .controller('LoginController', ['$scope', '$cookies', '$window', function ($scope, $cookies, $window) {
+            function getParameter(theParameter) {
+                var params = window.location.search.substr(1).split('&');
+
+                for (var i = 0; i < params.length; i++) {
+                    var p = params[i].split('=');
+                    if (p[0] == theParameter) {
+                        return decodeURIComponent(p[1]);
+                    }
+                }
+                return '';
+            }
+            var rth = '';
+            if (window.location.hash) {
+                rth = window.location.hash;
+            }
+            var rt = getParameter('redirect');
+            $scope.returnTo = '';
+            if (rt)
+                $scope.returnTo = rt + rth;
+            $scope.culture = $cookies.get('.AspNetCore.Culture');
+            if (!$scope.culture) {
+                $scope.culture = 'c=vi-VN|uic=vi-VN';
+            }
+            $scope.ChangeLanguage = function (lang) {
+                $scope.culture = lang;
+                var expireDate = new Date('Mon, 17 Nov 9999 23:59:59 GMT');
+                // Setting a cookie
+                $cookies.put(".AspNetCore.Culture", lang, { 'expires': expireDate });
+                //$cookies.put(".AspNetCore.Culture", lang, { 'expires': expireDate, domain: 'pos365.vn'});
+                $window.location.reload();
+            }
+
+        }]);</script>
+
+<ul class="cb-slideshow">
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+</ul>
+
+
+<div class="login clearfix" ng-app="pos.login" ng-controller="LoginController">
+    <div class="wrap clearfix">
+        <div class="login-content clearfix">
+            <a href="https://www.pos365.vn" target="_blank" class="logo-login wow fadeInDown hidden-xs" data-wow-delay="1.5s">
+                <img src="/images/logo-blue.png" alt="POS365.VN">
+
+
+            </a>
+            <div class="login-form clearfix wow fadeInUp form-horizontal" data-wow-delay="2s">
+                <h3>&#x110;&#x103;ng nh&#x1EAD;p ph&#x1EA7;n m&#x1EC1;m</h3>
+                <h5>FILA</h5>
+                <div id="p_errmsg">
+                    
+                </div>
+
+<form action="/Signin" method="post">                    <ul>
+                        <li>
+
+                            <input autofocus="" class="login-user" data-val="true" data-val-required="The Username field is required." id="Username" name="Username" placeholder="T&#xEA;n &#x111;&#x103;ng nh&#x1EAD;p ho&#x1EB7;c Email" type="text" value="" />
+                        </li>
+                        <li>
+                            <input class="login-pw" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="M&#x1EAD;t kh&#x1EA9;u" type="password" />
+                        </li>
+
+
+                        <li>
+                            <button name="loginsButton" type="submit" class="btn-login" value="Dashboard">
+                                Qu&#x1EA3;n l&#xFD;
+                            </button>
+                        </li>
+                        <li>
+
+
+                            <button name="loginsButton" type="submit" class="btn-reg" value="Sell">
+                                B&#xE1;n h&#xE0;ng
+                            </button>
+                        </li>
+                        <li class="login-help">
+
+                            <a href="/Signin/RequestPassword"><i class="fa fa-home red"></i> Qu&#xEA;n m&#x1EAD;t kh&#x1EA9;u?</a>
+
+
+
+
+                        </li>
+
+                    </ul>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ksb_UKvq41DglM0muQQgRNxsW2lzyeefnH2ZFNeYnKIhEzu7Q1uPNj_ianCZFg9HSxmYs-PwmikdpEEUxt0oQrDZm5TYnSD0OvzHsj193klaFgimBSHSPdsmSy36hf-52SWhxgjomKLdxI4ulIQMB4" /></form>            </div>
+        </div>
+    </div>
+    <div class="login-option">
+
+    <div class="wrap">
+        <span class="login-note" ng-show="culture == 'c=vi-VN|uic=vi-VN'">
+            PHẦN MỀM QUẢN LÝ BÁN HÀNG<br>- Không cần cài đặt, dữ liệu an toàn tuyệt đối.<br>- Hoạt động trên : Máy tính, Iphone, Ipad, Android...
+        </span>
+        <span class="login-note" ng-show="culture != 'c=vi-VN|uic=vi-VN'">
+            POINT OF SALE MANAGEMENT SYSTEM<br>- No installation required, absolute data security.<br>- Can be run on any : Desktop, Iphone, Ipad, Android...
+        </span>
+    </div>
+</div>
+
+
+<div class="footer clearfix">
+        <div class="wrap">
+
+            <span class="f-copyright hidden-xs">© <a style="color:#fff" href="/Signin/License">2022</a> <a style="color:#fff" href="/Signin/Active">365</a> Software JSC.</span>
+            <a href="https://www.pos365.vn/dieu-khoan-su-dung-5725.html" target="_blank" class="f-copyright hidden-xs">&nbsp;&nbsp;|&nbsp;&nbsp;Terms & Privacy</a>
+            <a href="tel:19004515" target="_blank" class="f-copyright"><span class="hidden-xs">&nbsp;&nbsp;|&nbsp;&nbsp;</span>Hotline 24/7: 1900 4515</a>
+            <span class="login-lang">{{culture == 'c=vi-VN|uic=vi-VN'?'Ngôn ngữ':'Language'}}: <a ng-click="ChangeLanguage('c=my-MM|uic=my-MM')" href="javascript:void(0)"><img src="/images/flag-my.png" alt="" /></a><a ng-click="ChangeLanguage('c=en-US|uic=en-US')" href="javascript:void(0)"><img src="/images/flag-en.png" alt="" /></a><a ng-click="ChangeLanguage('c=vi-VN|uic=vi-VN')" href="javascript:void(0)"><img src="/images/flag-vi.png" alt="" /></a></span>
+            <a href="https://www.facebook.com/pos365.vn/" target="_blank" class="f-social hidden-xs"> {{culture == 'c=vi-VN|uic=vi-VN'?'Kết nối với chúng tôi':'Connect with us'}}</a>
+        </div>
+</div>
+<!--END footer-->
+</div>
+
+    
+</body>
+</html>
+
+2022-11-14 15:54:36 [INF]: Environment: UAT
+2022-11-14 15:54:36 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 15:54:36 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 15:54:36 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/, method: POST, session: 2My9lvYgv30XQ6jHqKoO, request_model: {"Partner":{"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"2My9lvYgv30XQ6jHqKoO","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 15:54:37 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/, method: POST, session: 2My9lvYgv30XQ6jHqKoO, request_model: {"Partner":{"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"2My9lvYgv30XQ6jHqKoO","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"}) return success: <!DOCTYPE html>
+<html>
+<head>
+    <!-- Copyright © 2022 - 365 Software JSC (POS365.VN) -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>&#x110;&#x103;ng nh&#x1EAD;p ph&#x1EA7;n m&#x1EC1;m</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="robots" content="none" />
+    <meta name="google" content="notranslate" />
+    <meta property="og:title" content="POS365 | Giải pháp quản lý bán hàng" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="POS365.VN" />
+    <meta property="og:description" content="Phần mềm quản lý từ xa, giảm thất thoát tối đa" />
+    <meta property="og:image" content="/images/img-banner.png" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/favicon/ms-icon-144x144.png">
+
+
+    
+    
+        <script type="text/javascript" src="/bundle/bundle-jquery.min.js"></script>
+        <script type="text/javascript" src="/bundle/bundle-angular.min.js"></script>
+        <link rel="stylesheet" href="/bundle/bundle-guest.min.css" />
+    
+    <script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62807506-1"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-62807506-1');</script>
+</head>
+
+<body class="bg-body-login">
+    
+<script>angular.module('pos.login', ['ngCookies'])
+        .controller('LoginController', ['$scope', '$cookies', '$window', function ($scope, $cookies, $window) {
+            function getParameter(theParameter) {
+                var params = window.location.search.substr(1).split('&');
+
+                for (var i = 0; i < params.length; i++) {
+                    var p = params[i].split('=');
+                    if (p[0] == theParameter) {
+                        return decodeURIComponent(p[1]);
+                    }
+                }
+                return '';
+            }
+            var rth = '';
+            if (window.location.hash) {
+                rth = window.location.hash;
+            }
+            var rt = getParameter('redirect');
+            $scope.returnTo = '';
+            if (rt)
+                $scope.returnTo = rt + rth;
+            $scope.culture = $cookies.get('.AspNetCore.Culture');
+            if (!$scope.culture) {
+                $scope.culture = 'c=vi-VN|uic=vi-VN';
+            }
+            $scope.ChangeLanguage = function (lang) {
+                $scope.culture = lang;
+                var expireDate = new Date('Mon, 17 Nov 9999 23:59:59 GMT');
+                // Setting a cookie
+                $cookies.put(".AspNetCore.Culture", lang, { 'expires': expireDate });
+                //$cookies.put(".AspNetCore.Culture", lang, { 'expires': expireDate, domain: 'pos365.vn'});
+                $window.location.reload();
+            }
+
+        }]);</script>
+
+<ul class="cb-slideshow">
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+    <li><span></span><div></div></li>
+</ul>
+
+
+<div class="login clearfix" ng-app="pos.login" ng-controller="LoginController">
+    <div class="wrap clearfix">
+        <div class="login-content clearfix">
+            <a href="https://www.pos365.vn" target="_blank" class="logo-login wow fadeInDown hidden-xs" data-wow-delay="1.5s">
+                <img src="/images/logo-blue.png" alt="POS365.VN">
+
+
+            </a>
+            <div class="login-form clearfix wow fadeInUp form-horizontal" data-wow-delay="2s">
+                <h3>&#x110;&#x103;ng nh&#x1EAD;p ph&#x1EA7;n m&#x1EC1;m</h3>
+                <h5>FILA</h5>
+                <div id="p_errmsg">
+                    
+                </div>
+
+<form action="/Signin" method="post">                    <ul>
+                        <li>
+
+                            <input autofocus="" class="login-user" data-val="true" data-val-required="The Username field is required." id="Username" name="Username" placeholder="T&#xEA;n &#x111;&#x103;ng nh&#x1EAD;p ho&#x1EB7;c Email" type="text" value="" />
+                        </li>
+                        <li>
+                            <input class="login-pw" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="M&#x1EAD;t kh&#x1EA9;u" type="password" />
+                        </li>
+
+
+                        <li>
+                            <button name="loginsButton" type="submit" class="btn-login" value="Dashboard">
+                                Qu&#x1EA3;n l&#xFD;
+                            </button>
+                        </li>
+                        <li>
+
+
+                            <button name="loginsButton" type="submit" class="btn-reg" value="Sell">
+                                B&#xE1;n h&#xE0;ng
+                            </button>
+                        </li>
+                        <li class="login-help">
+
+                            <a href="/Signin/RequestPassword"><i class="fa fa-home red"></i> Qu&#xEA;n m&#x1EAD;t kh&#x1EA9;u?</a>
+
+
+
+
+                        </li>
+
+                    </ul>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8OepdSMHghJIg51lhVDzQwI9CZ9CpLYwtaqdGYie3-LDdMl-Kf_Lezqd4r-ARl_BgAt1S6Kahv2EMcgivA-Ib-De3UH0-zhs2xJS_yiu_V5V3yWN_lPNAQharhhlLeNArxVYL9E4RUwZeX9SzOEdi5Y" /></form>            </div>
+        </div>
+    </div>
+    <div class="login-option">
+
+    <div class="wrap">
+        <span class="login-note" ng-show="culture == 'c=vi-VN|uic=vi-VN'">
+            PHẦN MỀM QUẢN LÝ BÁN HÀNG<br>- Không cần cài đặt, dữ liệu an toàn tuyệt đối.<br>- Hoạt động trên : Máy tính, Iphone, Ipad, Android...
+        </span>
+        <span class="login-note" ng-show="culture != 'c=vi-VN|uic=vi-VN'">
+            POINT OF SALE MANAGEMENT SYSTEM<br>- No installation required, absolute data security.<br>- Can be run on any : Desktop, Iphone, Ipad, Android...
+        </span>
+    </div>
+</div>
+
+
+<div class="footer clearfix">
+        <div class="wrap">
+
+            <span class="f-copyright hidden-xs">© <a style="color:#fff" href="/Signin/License">2022</a> <a style="color:#fff" href="/Signin/Active">365</a> Software JSC.</span>
+            <a href="https://www.pos365.vn/dieu-khoan-su-dung-5725.html" target="_blank" class="f-copyright hidden-xs">&nbsp;&nbsp;|&nbsp;&nbsp;Terms & Privacy</a>
+            <a href="tel:19004515" target="_blank" class="f-copyright"><span class="hidden-xs">&nbsp;&nbsp;|&nbsp;&nbsp;</span>Hotline 24/7: 1900 4515</a>
+            <span class="login-lang">{{culture == 'c=vi-VN|uic=vi-VN'?'Ngôn ngữ':'Language'}}: <a ng-click="ChangeLanguage('c=my-MM|uic=my-MM')" href="javascript:void(0)"><img src="/images/flag-my.png" alt="" /></a><a ng-click="ChangeLanguage('c=en-US|uic=en-US')" href="javascript:void(0)"><img src="/images/flag-en.png" alt="" /></a><a ng-click="ChangeLanguage('c=vi-VN|uic=vi-VN')" href="javascript:void(0)"><img src="/images/flag-vi.png" alt="" /></a></span>
+            <a href="https://www.facebook.com/pos365.vn/" target="_blank" class="f-social hidden-xs"> {{culture == 'c=vi-VN|uic=vi-VN'?'Kết nối với chúng tôi':'Connect with us'}}</a>
+        </div>
+</div>
+<!--END footer-->
+</div>
+
+    
+</body>
+</html>
+
+2022-11-14 16:10:35 [INF]: Environment: UAT
+2022-11-14 16:10:35 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:10:35 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:10:35 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/json/metadata?op=PartnerSave, method: POST, session: LzARw8dn5I7ElN05Ey3j, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"LzARw8dn5I7ElN05Ey3j","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:10:35 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/json/metadata?op=PartnerSave, method: POST, session: LzARw8dn5I7ElN05Ey3j, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"LzARw8dn5I7ElN05Ey3j","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"}) return success: <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />	
+    <title>POS365.VN APIs</title>
+    <style type="text/css">
+        body  {
+            background-color:white;
+            color:#000000;
+            font-family: "Helvetica Neue", Helvetica, Verdana, Arial;
+            margin: 0;
+            font-size: 13px;
+        }
+        a#logo {
+            position: absolute;
+            top: 4px;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background-size: 42px 42px;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3E .path%7B%7D %3C/style%3E %3Cg id='servicestack-svg'%3E%3Cpath fill='%23dddddd' class='path' stroke='null' d='m16.564516,43.33871c16.307057,2.035887 54.629638,20.41875 60.67742,46.306452l-78.241936,0c19.859879,-1.616734 36.825605,-27.344758 17.564516,-46.306452zm6.387097,-30.33871c6.446976,7.105645 9.520766,16.74617 9.26129,26.666129c16.546573,6.726411 41.376412,24.690121 46.625807,49.979033l19.161291,0c-8.123589,-43.132863 -54.529839,-73.551412 -75.048388,-76.645162z' /%3E%3C/g%3E%3C/svg%3E");
+        }
+        .icons {
+            display: block;
+            float: right;
+        }
+        .auth {
+            display: block;
+            width: 17px;
+            height: 17px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAIAAAC0D9CtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAADsSURBVDhPY/hPOsCr58Pi/w9s/t/k+X9P5//zjP+/X0OEcet5lvL/BgMKui3z/+d9oAwOPR9Xo6h+VfP/cQCI8dABKIlDD0QFBN0zAIn8eg7l/riNQ88dBYSeGyz/37T/f5YA5X5cjUMP0OkIPajo22lsel4UoKuDo1si//9+x9AD1IBHDzBs0MMAogEt0CDopsD/j8shqpD0IDSwIJS+bgbF7LfTQCdBlSH0oGl4VQ9CMIPRAFgPsgZgSgEGK17AgK4BmMAIAbCj33RDnUTIBggA2wPxLtCSr4ehwngB2D/A1ApEsKROAPz/DwCLE/At7aBI3gAAAABJRU5ErkJggg==);
+        }
+        h1 {
+            color: #FFF;
+            font-size: 26px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0 0 0 15px;
+            line-height: 48px;
+            min-height: 48px;
+            border-radius: 0px;
+            border-bottom: 1px solid #191e23;
+            background: #2c3742; /* Old browsers */
+            background: -moz-linear-gradient(top,  #2c3742 0%, #28303a 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c3742), color-stop(100%,#28303a)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #2c3742 0%,#28303a 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #2c3742 0%,#28303a 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #2c3742 0%,#28303a 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #2c3742 0%,#28303a 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c3742', endColorstr='#28303a',GradientType=0 ); /* IE6-9 */
+        }
+        h2 {
+            margin: 25px 0 20px 0;
+            color: #29323D;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 24px;
+        }
+        h3 {
+            color: #29323D;
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        a {
+            color: #428bca;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            color: #2a6496;
+            text-decoration: underline;
+        }
+        ul {
+            margin: 10px 0 0 10px;
+            padding: 0 0 0 10px;
+        }
+        li {
+            clear: left;
+            margin-top: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 0 0 20px 0;
+        }
+        table, tr, th, td {
+            border: none;
+        }
+        .operations, .operation {
+            padding: 0 0 0 15px;
+        }
+        /* All Operations */
+        .operations table {
+            margin-left: 1.5em;
+        }
+        .operations th {
+            text-align: left;
+            font-weight: normal;
+            line-height: 18px;
+            min-width: 27em;
+            white-space: nowrap;
+        }
+        /* Single Operation */
+        .operations td {
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: bold;
+            color: #CCC;
+            padding-left: 1.5em;
+            vertical-align: top;
+        }
+        .operation caption {
+            text-align: left;
+            font-size: 14px;
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+        .operation tbody th {
+            text-align: left;
+        }
+        .operation thead th {
+            text-align: left;
+            text-transform: uppercase;
+        }
+        .operation th, .operation td {
+            padding: 5px 15px;
+            vertical-align: top;
+        }
+        .operation h4 {
+            margin: 10px 0;
+            padding: 0;
+        }
+        .operation li {
+            margin: 0;
+        }
+        .example {
+            padding-left: 15px;
+        }
+        .example h3 { 
+            color:#000000;
+            margin: 10px 0 0 -15px;
+        }
+        .example pre {
+            background-color: #E5E5CC;
+            border: 1px solid #F0F0E0;
+            font-family: Courier New;
+            font-size: 15px;
+            padding: 5px;
+            margin-right: 15px;
+            white-space: pre-wrap;
+            overflow:auto;
+        }
+        .example .value {
+            color: blue;
+        }    
+        .call-info {
+            margin: 0 0 20px 0;
+        }
+        #desc{
+            margin: 0;
+            padding: 0 0 15px 15px;
+            font-size: 16px;
+        }
+        #desc P {
+            margin: 5px 0;
+            padding: 0;
+            line-height: 20px;
+            color: #444;
+        }
+        div.tags {
+            color: rgb(44, 87, 119);
+            user-select: none;
+            margin: -15px 0 0 0;
+        }
+        div.tags span {
+            background: rgb(225, 236, 244);
+            border-radius: 3px;
+            margin: 2px 0 5px 2px;
+            display: inline-block;
+        }
+        div.tags span:hover {
+            background: rgb(209, 229, 241);
+        }
+        div.tags b {
+            font-weight: normal;
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+<body>
+    <a id="logo" href="https://servicestack.net" title="ServiceStack"></a>
+    <h1>POS365.VN APIs</h1>
+    
+    <div class="operation">
+    <div>
+        <p><a href="https://am013.pos365.vn/api/metadata">&lt;back to all web services</a></p>
+        <h2>PartnerSave</h2>
+        
+
+		<table class='authentication'><caption><b>Requires Authentication</b><i class='auth' style='display:inline-block;margin:0 0 -4px 5px;'></i></caption>
+<tr><td>Requires any of the permissions:</td><td>Partner_Update, Partner_Create</td></tr></table><table class='routes'><caption>The following routes are available for this service:</caption><tbody><tr><th>POST</th><th>/api/partners</th><td></td><td><i></i></td></tr><tbody></tbody></table><table class='params'><caption><b>PartnerSave</b> Parameters:</caption><thead><tr><th>Name</th><th>Parameter</th><th>Data Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td>Debt</td><td>body</td><td>float</td><td>No</td><td></td></tr><tr><td>CompareDebt</td><td>body</td><td>float</td><td>No</td><td></td></tr><tr><td>Partner</td><td>body</td><td>Partner</td><td>No</td><td></td></tr><tr><td>ComparePoint</td><td>body</td><td>float</td><td>No</td><td></td></tr></tbody></table><table class='params'><caption><b>Partner</b> Parameters:</caption><thead><tr><th>Name</th><th>Parameter</th><th>Data Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td>PlainPassword</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Id</td><td>form</td><td>long</td><td>No</td><td></td></tr><tr><td>Code</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Name</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Address</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Phone</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>DOB</td><td>form</td><td>DateTime?</td><td>No</td><td></td></tr><tr><td>Email</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Type</td><td>form</td><td>byte</td><td>No</td><td></td></tr><tr><td>Gender</td><td>form</td><td>byte</td><td>No</td><td></td></tr><tr><td>TaxCode</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>TotalDebt</td><td>form</td><td>decimal</td><td>No</td><td></td></tr><tr><td>Loyalty</td><td>form</td><td>decimal</td><td>No</td><td></td></tr><tr><td>Description</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>CreatedBy</td><td>form</td><td>long</td><td>No</td><td></td></tr><tr><td>CreatedDate</td><td>form</td><td>DateTime</td><td>No</td><td></td></tr><tr><td>ModifiedBy</td><td>form</td><td>long?</td><td>No</td><td></td></tr><tr><td>ModifiedDate</td><td>form</td><td>DateTime?</td><td>No</td><td></td></tr><tr><td>RetailerId</td><td>form</td><td>int</td><td>No</td><td></td></tr><tr><td>Image</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>LeadOwnerId</td><td>form</td><td>long?</td><td>No</td><td></td></tr><tr><td>Company</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Department</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Password</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Province</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Point</td><td>form</td><td>long</td><td>No</td><td></td></tr><tr><td>ShippingAddress</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Phone2</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>MemberJoinDate</td><td>form</td><td>DateTime?</td><td>No</td><td></td></tr><tr><td>Transactionvalue</td><td>form</td><td>decimal</td><td>No</td><td></td></tr><tr><td>LeadOwner</td><td>form</td><td>User</td><td>No</td><td></td></tr><tr><td>PartnerGroupMembers</td><td>form</td><td>ICollection&lt;PartnerGroupMember&gt;</td><td>No</td><td></td></tr></tbody></table><table class='params'><caption><b>User</b> Parameters:</caption><thead><tr><th>Name</th><th>Parameter</th><th>Data Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td>PlainPassword</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Id</td><td>form</td><td>long</td><td>No</td><td></td></tr><tr><td>Email</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>UserName</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Password</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Name</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>DOB</td><td>form</td><td>DateTime?</td><td>No</td><td></td></tr><tr><td>Address</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>Phone</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>CreatedDate</td><td>form</td><td>DateTime</td><td>No</td><td></td></tr><tr><td>IsActive</td><td>form</td><td>bool</td><td>No</td><td></td></tr><tr><td>IsAdmin</td><td>form</td><td>bool</td><td>No</td><td></td></tr><tr><td>RetailerId</td><td>form</td><td>int</td><td>No</td><td></td></tr><tr><td>CreatedBy</td><td>form</td><td>long</td><td>No</td><td></td></tr><tr><td>AdminGroup</td><td>form</td><td>byte</td><td>No</td><td></td></tr><tr><td>ManagedBy</td><td>form</td><td>long?</td><td>No</td><td></td></tr><tr><td>IdentityCardNumber</td><td>form</td><td>string</td><td>No</td><td></td></tr><tr><td>ManagedByNavigation</td><td>form</td><td>User</td><td>No</td><td></td></tr></tbody></table><table class='params'><caption><b>PartnerGroupMember</b> Parameters:</caption><thead><tr><th>Name</th><th>Parameter</th><th>Data Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td>Id</td><td>form</td><td>long</td><td>No</td><td></td></tr><tr><td>PartnerId</td><td>form</td><td>long</td><td>No</td><td></td></tr><tr><td>GroupId</td><td>form</td><td>long</td><td>No</td><td></td></tr></tbody></table><div class="call-info"><p>To override the Content-type in your clients, use the HTTP <b>Accept</b> Header, append  the <b>.json</b> suffix or  <b>?format=json</b></p><p>To embed the response in a <b>jsonp</b> callback, append <b>?callback=myCallback</b></p></div>
+
+		<div class="example">
+        <!-- REST Examples -->
+
+        <h3>HTTP + JSON</h3>
+        <p> The following are sample HTTP requests and responses. 
+            The placeholders shown need to be replaced with actual values.</p>
+
+<div class="request">
+<pre>
+POST /api/partners HTTP/1.1 
+Host: am013.pos365.vn 
+Accept: application/json
+Content-Type: application/json
+Content-Length: <span class="value">length</span>
+
+{&quot;Debt&quot;:0,&quot;CompareDebt&quot;:0,&quot;Partner&quot;:{&quot;PlainPassword&quot;:&quot;String&quot;,&quot;Id&quot;:0,&quot;Code&quot;:&quot;String&quot;,&quot;Name&quot;:&quot;String&quot;,&quot;Address&quot;:&quot;String&quot;,&quot;Phone&quot;:&quot;String&quot;,&quot;DOB&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;Email&quot;:&quot;String&quot;,&quot;Type&quot;:0,&quot;Gender&quot;:0,&quot;TaxCode&quot;:&quot;String&quot;,&quot;TotalDebt&quot;:0,&quot;Loyalty&quot;:0,&quot;Description&quot;:&quot;String&quot;,&quot;CreatedBy&quot;:0,&quot;CreatedDate&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;ModifiedBy&quot;:0,&quot;ModifiedDate&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;RetailerId&quot;:0,&quot;Image&quot;:&quot;String&quot;,&quot;LeadOwnerId&quot;:0,&quot;Company&quot;:&quot;String&quot;,&quot;Department&quot;:&quot;String&quot;,&quot;Password&quot;:&quot;String&quot;,&quot;Province&quot;:&quot;String&quot;,&quot;Point&quot;:0,&quot;ShippingAddress&quot;:&quot;String&quot;,&quot;Phone2&quot;:&quot;String&quot;,&quot;MemberJoinDate&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;Transactionvalue&quot;:0,&quot;LeadOwner&quot;:{&quot;PlainPassword&quot;:&quot;String&quot;,&quot;Id&quot;:0,&quot;Email&quot;:&quot;String&quot;,&quot;UserName&quot;:&quot;String&quot;,&quot;Password&quot;:&quot;String&quot;,&quot;Name&quot;:&quot;String&quot;,&quot;DOB&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;Address&quot;:&quot;String&quot;,&quot;Phone&quot;:&quot;String&quot;,&quot;CreatedDate&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;IsActive&quot;:false,&quot;IsAdmin&quot;:false,&quot;RetailerId&quot;:0,&quot;CreatedBy&quot;:0,&quot;AdminGroup&quot;:0,&quot;ManagedBy&quot;:0,&quot;IdentityCardNumber&quot;:&quot;String&quot;,&quot;ManagedByNavigation&quot;:{&quot;PlainPassword&quot;:&quot;String&quot;,&quot;Id&quot;:0,&quot;Email&quot;:&quot;String&quot;,&quot;UserName&quot;:&quot;String&quot;,&quot;Password&quot;:&quot;String&quot;,&quot;Name&quot;:&quot;String&quot;,&quot;DOB&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;Address&quot;:&quot;String&quot;,&quot;Phone&quot;:&quot;String&quot;,&quot;CreatedDate&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;IsActive&quot;:false,&quot;IsAdmin&quot;:false,&quot;RetailerId&quot;:0,&quot;CreatedBy&quot;:0,&quot;AdminGroup&quot;:0,&quot;ManagedBy&quot;:0,&quot;IdentityCardNumber&quot;:&quot;String&quot;,&quot;ManagedByNavigation&quot;:{&quot;PlainPassword&quot;:&quot;String&quot;,&quot;Id&quot;:0,&quot;Email&quot;:&quot;String&quot;,&quot;UserName&quot;:&quot;String&quot;,&quot;Password&quot;:&quot;String&quot;,&quot;Name&quot;:&quot;String&quot;,&quot;DOB&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;Address&quot;:&quot;String&quot;,&quot;Phone&quot;:&quot;String&quot;,&quot;CreatedDate&quot;:&quot;0001-01-01T00:00:00.0000000Z&quot;,&quot;IsActive&quot;:false,&quot;IsAdmin&quot;:false,&quot;RetailerId&quot;:0,&quot;CreatedBy&quot;:0,&quot;AdminGroup&quot;:0,&quot;ManagedBy&quot;:0,&quot;IdentityCardNumber&quot;:&quot;String&quot;}}}},&quot;ComparePoint&quot;:0}
+</pre>
+</div>
+
+
+<div class="response">
+<pre>
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: length
+
+{}
+</pre>
+</div>
+
+
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
+2022-11-14 16:13:07 [INF]: Environment: UAT
+2022-11-14 16:13:07 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:13:07 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:13:07 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/json/metadata?op=PartnerSave, method: POST, session: cYgqVdxQmkjdiSQp8EjF, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"cYgqVdxQmkjdiSQp8EjF","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:13:07 [ERR]: CRVBase.CallAPI(uri: https://am013.pos365.vn/api/json/metadata?op=PartnerSave, method: POST, session: cYgqVdxQmkjdiSQp8EjF, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"cYgqVdxQmkjdiSQp8EjF","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"}) - Exception message: Misused header name. Make sure request headers are used with HttpRequestMessage, response headers with HttpResponseMessage, and content headers with HttpContent objects.
+Inner Exception (If any): 
+2022-11-14 16:13:31 [INF]: Environment: UAT
+2022-11-14 16:13:31 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:13:31 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:13:31 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/json/metadata?op=PartnerSave, method: POST, session: 6Fl5LdadqgEn8I8yO7k7, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"6Fl5LdadqgEn8I8yO7k7","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:20:40 [INF]: Environment: UAT
+2022-11-14 16:20:40 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:20:41 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:20:50 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/json/metadata?op=PartnerSave, method: POST, session: CZqDBQLBof1luprqyDNB, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"CZqDBQLBof1luprqyDNB","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:24:32 [INF]: Environment: UAT
+2022-11-14 16:24:32 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:24:32 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:24:35 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 68pX5DDoLyAILs1tGoj2, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"68pX5DDoLyAILs1tGoj2","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:25:17 [INF]: Environment: UAT
+2022-11-14 16:25:17 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:25:17 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:25:31 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: EBOpZLKCnJRHm6AXHbEj, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"EBOpZLKCnJRHm6AXHbEj","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:26:46 [INF]: Environment: UAT
+2022-11-14 16:26:46 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:26:46 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:27:01 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: oLR3Cz3tBauirVXXRKiu, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"oLR3Cz3tBauirVXXRKiu","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:27:49 [INF]: Environment: UAT
+2022-11-14 16:27:50 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:27:50 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:27:55 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: VuyUbGivKLaYsCij36V0, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"VuyUbGivKLaYsCij36V0","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:30:25 [INF]: Environment: UAT
+2022-11-14 16:30:25 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:30:25 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:30:32 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: ALvEngeQdr55cg5DjgwT, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"ALvEngeQdr55cg5DjgwT","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:33:43 [INF]: Environment: UAT
+2022-11-14 16:33:43 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:33:44 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:33:44 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: RFdsHHPAe1ayjk243mrJ, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"RFdsHHPAe1ayjk243mrJ","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:37:47 [INF]: Environment: UAT
+2022-11-14 16:37:48 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:37:48 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:39:11 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: sm9MJ6ptz2dPGG7nXGi0, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"sm9MJ6ptz2dPGG7nXGi0","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:41:33 [INF]: Environment: UAT
+2022-11-14 16:41:35 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:41:42 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:41:42 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: Jdk0a6hmssrJbPLyj75j, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"Jdk0a6hmssrJbPLyj75j","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:44:50 [INF]: Environment: UAT
+2022-11-14 16:44:50 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:44:50 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:44:50 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: lNE43wghnXNEAv5qTjeb, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"lNE43wghnXNEAv5qTjeb","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:46:11 [INF]: Environment: UAT
+2022-11-14 16:46:11 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:46:11 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:46:11 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: Pfh49ntYmTuwDCXmRNTl, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"Pfh49ntYmTuwDCXmRNTl","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:46:33 [INF]: Environment: UAT
+2022-11-14 16:46:33 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:46:33 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:46:33 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: VTmxmHFs2memabXwMEdx, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"VTmxmHFs2memabXwMEdx","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:48:57 [INF]: Environment: UAT
+2022-11-14 16:49:20 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:49:37 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:51:00 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: PT7bhN5XRudBP8PpX3Ql, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"PT7bhN5XRudBP8PpX3Ql","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:52:42 [INF]: Environment: UAT
+2022-11-14 16:52:45 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:52:45 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:52:45 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: gBg0RxHVtiQ78N66w1o2, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"gBg0RxHVtiQ78N66w1o2","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 16:54:00 [INF]: Environment: UAT
+2022-11-14 16:54:00 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 16:54:00 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 16:54:00 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: lDKUZxsn7SBbyFmI0ap1, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"lDKUZxsn7SBbyFmI0ap1","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:00:24 [INF]: Environment: UAT
+2022-11-14 17:00:24 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:00:24 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:00:24 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 31njN8FUEc2JVZyKzhgb, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"31njN8FUEc2JVZyKzhgb","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:00:46 [INF]: Environment: UAT
+2022-11-14 17:00:46 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:00:46 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:00:46 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 3Y87ifa7d65YPzuhDcit, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"3Y87ifa7d65YPzuhDcit","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:01:02 [INF]: Environment: UAT
+2022-11-14 17:01:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:01:03 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:01:03 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: qsEVHw2qTuDEXOx2u2fg, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"qsEVHw2qTuDEXOx2u2fg","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:01:47 [INF]: Environment: UAT
+2022-11-14 17:01:47 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:01:48 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:01:48 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: bLNZ654DjLI1NEOs3taF, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"bLNZ654DjLI1NEOs3taF","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:02:14 [INF]: Environment: UAT
+2022-11-14 17:02:14 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:02:14 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:02:14 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 1zUPDEzIGovL2aQTodDX, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"1zUPDEzIGovL2aQTodDX","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:03:38 [INF]: Environment: UAT
+2022-11-14 17:03:38 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:03:38 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:03:39 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: OLHsKAFeRKAduh3bk78y, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"OLHsKAFeRKAduh3bk78y","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:04:55 [INF]: Environment: UAT
+2022-11-14 17:04:55 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:04:56 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:04:56 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: KL8lbpuqpUWiGrgnmEBu, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"KL8lbpuqpUWiGrgnmEBu","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:05:22 [INF]: Environment: UAT
+2022-11-14 17:05:22 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:05:22 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:05:22 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: yHRhYQ0n1FqqD2AtCqxJ, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"yHRhYQ0n1FqqD2AtCqxJ","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:05:42 [INF]: Environment: UAT
+2022-11-14 17:05:42 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:05:42 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:05:42 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: FLeVAnBeniynUBW4JQ9b, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"FLeVAnBeniynUBW4JQ9b","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:06:05 [INF]: Environment: UAT
+2022-11-14 17:06:05 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:06:05 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:06:05 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: zyQRVoxR68tlWwy35S8Q, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"zyQRVoxR68tlWwy35S8Q","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:06:16 [INF]: Environment: UAT
+2022-11-14 17:06:16 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:06:16 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:06:16 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: ffQyu6WKodOiRSSPRcE5, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"ffQyu6WKodOiRSSPRcE5","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:06:25 [INF]: Environment: UAT
+2022-11-14 17:06:26 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:06:26 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:06:26 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: fjKu4v0qaiEi20tcokOJ, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"fjKu4v0qaiEi20tcokOJ","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:07:28 [INF]: Environment: UAT
+2022-11-14 17:07:28 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:07:28 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:07:28 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: rFeSVgcZUBXxxMvN2nKe, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"rFeSVgcZUBXxxMvN2nKe","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:08:16 [INF]: Environment: UAT
+2022-11-14 17:08:16 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:08:16 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:08:16 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: dRTWEzfvtcYgfnlrkKwf, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"dRTWEzfvtcYgfnlrkKwf","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:08:50 [INF]: Environment: UAT
+2022-11-14 17:08:50 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:08:51 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:08:51 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: sV6ptjHB5B59fPeOr43C, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"sV6ptjHB5B59fPeOr43C","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:09:02 [INF]: Environment: UAT
+2022-11-14 17:09:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:09:02 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:09:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: j6wegYPPuXvHYj54EkX1, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"j6wegYPPuXvHYj54EkX1","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:09:43 [INF]: Environment: UAT
+2022-11-14 17:09:43 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:09:44 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:09:44 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 89JgGSItbZQQZ1nBrCTh, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"89JgGSItbZQQZ1nBrCTh","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:13:30 [INF]: Environment: UAT
+2022-11-14 17:13:30 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:13:30 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:13:30 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: CX5viuvzjsP8f2w7Qj9i, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"CX5viuvzjsP8f2w7Qj9i","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:13:39 [INF]: Environment: UAT
+2022-11-14 17:13:39 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:13:39 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:13:39 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 2vprRRFCCf7Pm7qOxWo6, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"2vprRRFCCf7Pm7qOxWo6","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:15:19 [INF]: Environment: UAT
+2022-11-14 17:15:19 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:15:19 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:15:19 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: cGeOJXAFZFicabpX6DT6, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"cGeOJXAFZFicabpX6DT6","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:20:04 [INF]: Environment: UAT
+2022-11-14 17:20:04 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:20:04 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:20:04 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: kqfOxBp3RBQ2wPJXIEXd, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"kqfOxBp3RBQ2wPJXIEXd","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:24:07 [INF]: Environment: UAT
+2022-11-14 17:24:07 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:24:08 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:24:08 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: I1RuTsgFAg2aRfXkVlg6, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"I1RuTsgFAg2aRfXkVlg6","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:24:37 [INF]: Environment: UAT
+2022-11-14 17:24:37 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:24:37 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:24:37 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: wbycIaGumCLGYPxTLxUr, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"wbycIaGumCLGYPxTLxUr","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:29:36 [INF]: Environment: UAT
+2022-11-14 17:29:37 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:29:37 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:29:37 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: VC9YdVSW48I3TYj0Pu67, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"VC9YdVSW48I3TYj0Pu67","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:30:46 [INF]: Environment: UAT
+2022-11-14 17:30:46 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:30:46 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:30:46 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: JfSs7dV8KAhGftdthkwU, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"JfSs7dV8KAhGftdthkwU","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:35:20 [INF]: Environment: UAT
+2022-11-14 17:35:20 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:35:20 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:35:20 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: QwMtBoAorWtkWIlr7vDb, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"QwMtBoAorWtkWIlr7vDb","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:41:17 [INF]: Environment: UAT
+2022-11-14 17:41:17 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:41:18 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:41:18 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: RP73qYIutXQJTtWfIUbI, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"RP73qYIutXQJTtWfIUbI","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:41:55 [INF]: Environment: UAT
+2022-11-14 17:41:55 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:41:55 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:41:55 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: TZhKSmINYECdGQTneoQR, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"TZhKSmINYECdGQTneoQR","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:42:03 [INF]: Environment: UAT
+2022-11-14 17:42:03 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:42:03 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:42:03 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 74NlCbEi2LeT3067m7qD, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"74NlCbEi2LeT3067m7qD","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:42:05 [INF]: Environment: UAT
+2022-11-14 17:42:05 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:42:06 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:42:06 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: pQeaYvej8rZJPh3Td0pK, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"pQeaYvej8rZJPh3Td0pK","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:42:14 [INF]: Environment: UAT
+2022-11-14 17:42:14 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:42:14 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:42:14 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: unKZ8VSzZlAAexDPaHA4, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"unKZ8VSzZlAAexDPaHA4","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:51:01 [INF]: Environment: UAT
+2022-11-14 17:51:01 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:51:02 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:51:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: NhNSBGs8YYamuHx0z1MH, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"NhNSBGs8YYamuHx0z1MH","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:52:01 [INF]: Environment: UAT
+2022-11-14 17:52:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:52:02 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:52:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: zosz9n5Mi8ysqnuEXj8y, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"zosz9n5Mi8ysqnuEXj8y","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 17:52:50 [INF]: Environment: UAT
+2022-11-14 17:52:50 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 17:52:50 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 17:52:50 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: AIaeyGNZXrheqGfnuM6K, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"AIaeyGNZXrheqGfnuM6K","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:00:03 [INF]: Environment: UAT
+2022-11-14 18:00:03 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:00:04 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:00:04 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: JkUqfkWDQGOuZwNsoLTO, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"JkUqfkWDQGOuZwNsoLTO","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:00:57 [INF]: Environment: UAT
+2022-11-14 18:00:57 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:00:57 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:00:57 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: TPZist2M5N5zLFNC9olk, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"TPZist2M5N5zLFNC9olk","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:01:32 [INF]: Environment: UAT
+2022-11-14 18:01:32 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:01:32 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:01:32 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: SO6oJZX2UovSN6DgZMHo, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"SO6oJZX2UovSN6DgZMHo","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:01:45 [INF]: Environment: UAT
+2022-11-14 18:01:45 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:01:55 [INF]: Environment: UAT
+2022-11-14 18:01:55 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:01:56 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:01:56 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 9PdgFVie4S5oQkRYedLQ, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"9PdgFVie4S5oQkRYedLQ","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:02:29 [INF]: Environment: UAT
+2022-11-14 18:02:29 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:02:29 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:02:29 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: jtOGyrTEIQIvn36Fdz8P, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"jtOGyrTEIQIvn36Fdz8P","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:02:49 [INF]: Environment: UAT
+2022-11-14 18:02:49 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:02:50 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:02:50 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 8k5PHNuLHGPjdw4Znhxo, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"8k5PHNuLHGPjdw4Znhxo","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:04:28 [INF]: Environment: UAT
+2022-11-14 18:04:28 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:04:28 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:04:28 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: MDLSRsBVq9f3ucIUOJuo, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"MDLSRsBVq9f3ucIUOJuo","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:04:43 [INF]: Environment: UAT
+2022-11-14 18:04:44 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:04:44 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:04:44 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: od0ZwsYRyjwXF9su9JXt, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"od0ZwsYRyjwXF9su9JXt","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:05:10 [INF]: Environment: UAT
+2022-11-14 18:05:10 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:05:10 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:05:10 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: bTrRCIhO63VvRBBXnzu0, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"bTrRCIhO63VvRBBXnzu0","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:05:26 [INF]: Environment: UAT
+2022-11-14 18:05:26 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:05:26 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:05:26 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: qtRlbMQBMbA0qKG634wv, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"qtRlbMQBMbA0qKG634wv","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:07:02 [INF]: Environment: UAT
+2022-11-14 18:07:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:07:02 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:07:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: mwA7MiJqQu7CvaGoRT8j, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"mwA7MiJqQu7CvaGoRT8j","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:08:46 [INF]: Environment: UAT
+2022-11-14 18:08:46 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:08:46 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:08:47 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: TEjNHAHsZLTiZ9p7hsrU, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"TEjNHAHsZLTiZ9p7hsrU","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:08:54 [INF]: Environment: UAT
+2022-11-14 18:09:47 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:10:17 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:11:06 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: G1LBcrLQF07hbbPNFiws, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"G1LBcrLQF07hbbPNFiws","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:11:53 [INF]: Environment: UAT
+2022-11-14 18:11:54 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:11:54 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:12:01 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: WzOACBcQVTNue7B0HATc, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"WzOACBcQVTNue7B0HATc","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:13:15 [INF]: Environment: UAT
+2022-11-14 18:13:15 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:13:15 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:13:15 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: oranFDX3OsKVDHBjpUsy, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"oranFDX3OsKVDHBjpUsy","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:14:23 [INF]: Environment: UAT
+2022-11-14 18:14:23 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:14:24 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:14:24 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: Faj3fC9BlVpTbN1peB8A, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"Faj3fC9BlVpTbN1peB8A","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:16:04 [INF]: Environment: UAT
+2022-11-14 18:16:04 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:16:04 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:16:04 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: j4V1b0Q0bcfzEEHqx9L9, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"j4V1b0Q0bcfzEEHqx9L9","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:16:08 [INF]: Environment: UAT
+2022-11-14 18:16:08 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:16:09 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:16:09 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: j64XlqQnXyqv8Nw6GTPu, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"j64XlqQnXyqv8Nw6GTPu","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:16:30 [INF]: Environment: UAT
+2022-11-14 18:16:30 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:16:30 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:16:30 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 7Z1UELPQn3MLQYGDP46A, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"7Z1UELPQn3MLQYGDP46A","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:16:44 [INF]: Environment: UAT
+2022-11-14 18:16:44 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:16:44 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:16:44 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: WjiVPu4FyrfKp7fPiXCa, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"WjiVPu4FyrfKp7fPiXCa","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:16:49 [INF]: Environment: UAT
+2022-11-14 18:16:49 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:16:50 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:16:50 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: Ba5wLRAib3j3F63Mtg5A, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"Ba5wLRAib3j3F63Mtg5A","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:18:17 [INF]: Environment: UAT
+2022-11-14 18:18:17 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:18:17 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:18:17 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 6VlrOFqzzUbDmo8XwKPv, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"6VlrOFqzzUbDmo8XwKPv","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:18:26 [INF]: Environment: UAT
+2022-11-14 18:18:26 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:18:26 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:18:26 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: u4cbqgLvhZ3B1jbOXmF8, request_model: {"Partner":{"Type":1,"Code":"Quang","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"u4cbqgLvhZ3B1jbOXmF8","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:20:02 [INF]: Environment: UAT
+2022-11-14 18:20:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:20:02 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:20:02 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: NgVx5neJOsWkzkeJcjjQ, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"NgVx5neJOsWkzkeJcjjQ","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:22:22 [INF]: Environment: UAT
+2022-11-14 18:22:22 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:22:23 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:22:23 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: OkJRb8wNQCRBoGzbRcNO, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"OkJRb8wNQCRBoGzbRcNO","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:28:01 [INF]: Environment: UAT
+2022-11-14 18:28:01 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json, method: GET
+2022-11-14 18:28:01 [INF]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/auth/credentials?format=json&Username=admin&Password=123456, method: GET
+2022-11-14 18:28:01 [INF]: Start calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, session: 2PlyI2EKuGQ2uEWmIRj4, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"2PlyI2EKuGQ2uEWmIRj4","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"})
+2022-11-14 18:28:20 [ERR]: Calling CRVBase.CallAPI(uri: https://am013.pos365.vn/api/partners, method: POST, toksessionen: 2PlyI2EKuGQ2uEWmIRj4, request_model: {"Partner":{"Type":1,"Code":"RCA000632","Name":"Customer@Fila Vincom Mega Mall Times City","Phone":""},"Session":"2PlyI2EKuGQ2uEWmIRj4","AXId":"5eb8a9d6-fe66-4357-9769-cd3ced1c1cea","StoreNumber":"2763G4"}) return fail: {"ResponseStatus":{"ErrorCode":"POSException","Message":"RCA000632 đã tồn tại trong hệ thống.","Errors":[]}}
